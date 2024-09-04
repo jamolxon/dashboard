@@ -1,0 +1,35 @@
+{% load static %}
+
+<!--begin::Footer-->
+<div class="footer bg-white py-4 d-flex flex-lg-column" id="kt_footer">
+  <!--begin::Container-->
+  <div class="container-fluid Some">
+    <!--begin::Copyright-->
+
+    <div class="text-dark order-2 order-md-1">
+      <a href="" target="_blank" class="text-dark-75 text-hover-primary">Shivaki ©</a>
+      <span class="text-muted font-weight-bold " >2024</span>
+      <span class="text-muted font-weight-bold "  id="current-year"></span>
+    </div>
+
+    <script type="text/javascript">
+      year = new Date().getFullYear()
+      let now = document.querySelector('#current-year')
+      if(year > 2024){
+      now.innerHTML = '- ' + year
+      }
+    </script>
+
+
+    <style type="text/css">
+
+      .Some{
+        text-align: right;
+      }
+
+    </style>
+
+  </div>
+  <!--end::Container-->
+</div>
+<!--end::Footer-->

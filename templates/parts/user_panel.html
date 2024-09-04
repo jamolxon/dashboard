@@ -1,0 +1,44 @@
+{% load static %}
+
+<!-- begin::User Panel-->
+<div id="kt_quick_user" class="offcanvas offcanvas-right p-10">
+  <!--begin::Header-->
+  <div class="offcanvas-header d-flex align-items-center justify-content-between pb-5">
+
+      <h3 class="font-weight-bold m-0">{{user.username}} профили</h3>
+    <a href="#" class="btn btn-xs btn-icon btn-light btn-hover-primary" id="kt_quick_user_close">
+      <i class="ki ki-close icon-xs text-muted"></i>
+    </a>
+  </div>
+  <!--end::Header-->
+    <a href="{% url 'logout' %}" class="btn btn-sm btn-light-primary font-weight-bolder py-2 px-5 removeButton" data-toggle="modal" data-target="#deleteModal1">Чиқиш</a>
+
+</div>
+
+<!-- Success Popup -->
+    <div class="modal fade" id="deleteModal1" tabindex="-1" role="dialog"
+        aria-labelledby="deleteModal1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header"></div>
+          <div class="modal-body mt-5">
+                <h2 class="text-center mt-4 mb-3">
+                    Чиқиш
+                </h2>
+              <p class="text-center">Ишончингиз комилми?</p>
+          </div>
+          <div class="modal-footer mx-auto">
+
+              <button type="button"
+                      class="btn btn-outline-secondary mb-3 mr-3"
+                      data-dismiss="modal">Ортга қайтиш
+              </button>
+                <a href="{% url 'logout' %}" id="modalDeleteButton1">
+                    <button type="button" class="btn btn-danger mb-3">
+                        Чиқиш
+                    </button>
+              </a>
+                </div>
+            </div>
+        </div>
+    </div>

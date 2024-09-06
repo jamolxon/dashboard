@@ -82,11 +82,11 @@
                                             <th scope="row"> <a href="">{{video.name|default_if_none:"-"|truncatewords:5}}</a> </th>
                                             <td nowrap="nowrap">
 
-                                                <a href=""
+                                                <a href="{% url 'home_video:home-video-update' video.id %}"
                                                     class="btn btn-sm btn-clean btn-icon" title="Таҳрирлаш"> <i
                                                         class="la la-edit"></i>
                                                 </a>
-                                                <a href="" data-toggle="modal" data-target="#deleteModal"
+                                                <a href="{% url 'home_video:home-video-delete' video.id %}" data-toggle="modal" data-target="#deleteModal"
                                                     class="btn btn-sm btn-clean btn-icon removeButton" title="Ўчириш"> <i
                                                         class="la la-trash"></i>
                                                 </a>
@@ -108,7 +108,7 @@
                                                                     class="btn btn-outline-secondary mb-3 mr-3"
                                                                     data-dismiss="modal">Ортга қайтиш
                                                                 </button>
-                                                                <a href="" id="modalDeleteButton">
+                                                                <a href="{% url 'home_video:home-video-delete' video.id %}" id="modalDeleteButton">
                                                                     <button type="button" class="btn btn-danger mb-3">
                                                                         Ўчириш
                                                                     </button>
